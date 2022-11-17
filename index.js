@@ -9,4 +9,4 @@ app.post("/api/time",(req,res)=>{
 
 app.get("*",()=>console.log("here"))
 
-app.listen(5001,()=>console.log("started server on port 5000"))
+app.listen(5001,()=>console.log("started server on port 5001"))

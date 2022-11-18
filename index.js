@@ -3,7 +3,7 @@ const express = require("express")
 const app = express()
 
 app.post("/api/time",(req,res)=>{
-    console.log(req)
+    console.log(req.body)
     return res.json({})
 })
 

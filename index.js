@@ -2,9 +2,13 @@ const express = require("express")
 
 const app = express()
 
+let prev_time = 0;
+
 app.post("/api/time",(req,res)=>{
-    console.log(req.UNPACK_MESSAGE_1)
-    return res.json({})
+    if(prev_time){
+      console.log((new Date.getTime() - prev_time)/1000)
+    }
+    prev_time = new Date.getTime()
 })
 
 app.get("*",()=>console.log("here"))

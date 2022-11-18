@@ -6,9 +6,10 @@ let prev_time = 0;
 
 app.post("/api/time",(req,res)=>{
     if(prev_time){
-      console.log((new Date.getTime() - prev_time)/1000)
+      console.log((new Date().getTime() - prev_time)/1000)
     }
-    prev_time = new Date.getTime()
+    prev_time = new Date().getTime()
+    return res.json({})
 })
 
 app.get("*",()=>console.log("here"))
